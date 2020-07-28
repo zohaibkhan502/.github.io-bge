@@ -1,0 +1,27 @@
+{
+  "name" : "MoreMenuOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "E9D4A0DE-CD16-4C5D-8D16-8A3F1CB4A1DB",
+    "canonicalName" : "Solar",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "526F32AD-91E3-4258-889C-B76312908F05",
+    "canonicalName" : "Forgot Password",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "0446D90C-49A8-4155-A460-53DBA2437E22",
+    "canonicalName" : "Budget Billing",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "B9DB4050-ADEA-4171-B09B-B9864DE821A0"
+}

@@ -1,0 +1,21 @@
+{
+  "name" : "YesNoOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "BF147537-2AB9-40BE-83BC-F70716B865C7",
+    "canonicalName" : "Yes",
+    "synonyms" : [ "yeah", "yo", "ya", "yes", "y" ],
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "F8FB5892-21D4-4F72-B4B5-6130900FAB9D",
+    "canonicalName" : "No",
+    "synonyms" : [ "nope", "neah", "n", "no", "nah" ],
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "AAB05246-1F93-44C9-A641-27559448BDFE"
+}

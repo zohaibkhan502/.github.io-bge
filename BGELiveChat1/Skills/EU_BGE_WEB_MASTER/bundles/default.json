@@ -1,0 +1,115 @@
+{
+  "languageTag" : "default",
+  "keys" : {
+    "system.qna.Billing.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "840C4F7F-D039-4D2B-8A3F-31353EF98D6E"
+    },
+    "system.intent.HowToRegister.conversationName" : {
+      "message" : "How do I create an online account?",
+      "extensionType" : null,
+      "trackingId" : "D5A28786-16B5-4255-B5F2-B8C83F81F980"
+    },
+    "system.intent.Covid19-Assistance.conversationName" : {
+      "message" : "Covid19-Assistance",
+      "extensionType" : null,
+      "trackingId" : "CADA52C8-2D82-438D-BF0F-5F0E44C0F8C0"
+    },
+    "system.intent.Power Line.conversationName" : {
+      "message" : "Power Line",
+      "extensionType" : null,
+      "trackingId" : "ADCCC3E1-AFAB-4411-8817-823D76B6CE75"
+    },
+    "system.qna.Covid19-Assistance.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "20038D89-4388-41AA-ABA0-053C297A11B0"
+    },
+    "system.qna.HowToRegister.answer" : {
+      "message" : "Registering for My Account is easy! If you have active service with ACE, you can <a href='https://azstage.atlanticcityelectric.com/Pages/UserRegistrationLanding.aspx' target='_blank'>register online</a>. Here's everything you need to know. Before you get started, make sure you have: <br>- ACE Account Number <br>- Primary Phone Number (the number you provided when starting your service) <br>- Last 4 digits of the primary account holder SSN OR use the four digit PIN generation tool <br><br>Got everything? Great! You're ready to set up your online account following the steps below: <br>1) On any page, press the Sign In button and then select the <a href='https://azstage.atlanticcityelectric.com/Pages/UserRegistrationLanding.aspx' target='_blank'>Register Here</a> link. <br>2) Choose the option that matches the type of electric account you have. <br>3) Fill out the information on each window and select Continue.",
+      "extensionType" : null,
+      "trackingId" : "B0C50150-74AC-4C90-BF15-E2D1A48476CF"
+    },
+    "system.intent.Greetings.conversationName" : {
+      "message" : "Greetings",
+      "extensionType" : null,
+      "trackingId" : "AC48BC1C-EF9B-4873-8DEE-E2DAD81C01E0"
+    },
+    "system.qna.unresolvedIntent.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "D983059A-2CE7-4BCD-8475-A03E0DF361DA"
+    },
+    "system.qna.My Services.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "BD66ECC2-7B54-4151-808C-98B534D809B4"
+    },
+    "system.qna.Power Line.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "E4069ED6-EDA5-4020-AA39-0AC00F941936"
+    },
+    "system.qna.End.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "194FFB14-C990-46F6-BA53-64A91A6CCC48"
+    },
+    "system.intent.End.conversationName" : {
+      "message" : "End",
+      "extensionType" : null,
+      "trackingId" : "9A1C0355-523D-4EE3-82CF-156BB3D7AC79"
+    },
+    "system.qna.Solar Eligibility.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "D395B8BA-5CCC-4B22-97AF-EF2351D083BE"
+    },
+    "system.qna.Greetings.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "BC8F755E-D124-446A-8A29-12E55145B687"
+    },
+    "system.qna.Find Account Number.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "5492D8AE-82F6-4CBB-8298-2581E42563B7"
+    },
+    "system.intent.Billing.conversationName" : {
+      "message" : "Billing",
+      "extensionType" : null,
+      "trackingId" : "8F80E62A-EB3A-4B99-BF11-DED438F8C228"
+    },
+    "system.intent.My Services.conversationName" : {
+      "message" : "My Services",
+      "extensionType" : null,
+      "trackingId" : "2DA2BB98-963F-4BF9-B115-96FD95F31942"
+    },
+    "system.intent.Find Account Number.conversationName" : {
+      "message" : "Intent00001",
+      "extensionType" : null,
+      "trackingId" : "21D810C3-06B6-4CE3-A4FF-B88233FA95C2"
+    },
+    "system.intent.Solar Eligibility.conversationName" : {
+      "message" : "Solar Eligibility",
+      "extensionType" : null,
+      "trackingId" : "57B17D39-5D27-4653-8EB3-282C12F52D7B"
+    },
+    "system.intent.unresolvedIntent.conversationName" : {
+      "message" : "unresolvedIntent",
+      "extensionType" : null,
+      "trackingId" : "5E89C4B8-D743-46B2-89D8-8F3E9D1FFFCF"
+    },
+    "system.qna.More Menu.answer" : {
+      "message" : null,
+      "extensionType" : null,
+      "trackingId" : "243F4355-7A05-4E64-A388-62CD9BB61ADA"
+    },
+    "system.intent.More Menu.conversationName" : {
+      "message" : "More Menu",
+      "extensionType" : null,
+      "trackingId" : "731939B7-61C2-4747-B843-20AB3B0E08A1"
+    }
+  }
+}

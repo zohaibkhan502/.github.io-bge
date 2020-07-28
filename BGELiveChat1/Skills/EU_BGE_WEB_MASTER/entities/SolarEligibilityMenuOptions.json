@@ -1,0 +1,21 @@
+{
+  "name" : "SolarEligibilityMenuOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "2F661AEB-BC64-4D7E-8D55-5CE8D2C70598",
+    "canonicalName" : "Home and Business",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "4D60BE88-1286-49FD-9709-503569C68C7B",
+    "canonicalName" : "Developer or Contractor",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "E98C72DA-2D05-4517-A302-671FD90AAD5A"
+}

@@ -1,0 +1,64 @@
+{
+  "name" : "End",
+  "trackingId" : "4E56E006-C693-46D8-9017-4F0E47313103",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Thank you for your help",
+    "trackingId" : "82564FC1-1861-4130-BE83-D75108113143",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Thank you",
+    "trackingId" : "1555FD7E-BADB-4F2F-8F84-8BCF21D8C373",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "see you",
+    "trackingId" : "EC576D63-DCF5-4470-953B-8E72D989DBDD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Goodbye",
+    "trackingId" : "32762476-3A7B-4CFD-A1FB-0272C8EFF536",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I am good",
+    "trackingId" : "C7AF847C-259C-4095-8594-F737118FCAB9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I am done here",
+    "trackingId" : "1C777BF8-AE48-4EE7-92B0-96BEC005126A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I am leaving now",
+    "trackingId" : "EF6AF4CF-D95C-44A1-A7CB-3556E668762E",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

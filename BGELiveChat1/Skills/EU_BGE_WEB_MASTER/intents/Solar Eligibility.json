@@ -1,0 +1,160 @@
+{
+  "name" : "Solar Eligibility",
+  "trackingId" : "244908FE-93FC-4034-BBCF-54900D0544E8",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "How expensive is solar power?",
+    "trackingId" : "450C40C3-CA47-4955-B3C6-D42C1D0F5748",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Solar energy cost.",
+    "trackingId" : "7D3000CC-FE47-4FA2-A24D-B85FA0D73ECC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What’s the benefit of solar?",
+    "trackingId" : "C7CEF13C-6032-4DF8-B342-2663EB2F1512",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Is solar power available in my area?",
+    "trackingId" : "993D8394-CCCA-4F7A-A50F-B54C999670B3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Solar cost savings.",
+    "trackingId" : "9AC4DA3C-A2AA-421C-A15D-F8C49E191204",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I’m a contractor. What do I need to know about solar?",
+    "trackingId" : "F1AD1C62-8F46-4BC5-BE0C-E7553F767A3B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Does Atlantic City Electric offer solar rebates?",
+    "trackingId" : "96AA04FC-9F7F-4157-B671-D8578B0D2D80",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What’s the difference between private and community solar?",
+    "trackingId" : "A11756E5-39CC-4BC9-83D6-2E8A9A18F1FF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Can I install solar at my house?",
+    "trackingId" : "BEABB510-A9D9-470C-A16D-1543F049C47F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How does Atlantic City Electric help developers and contractors with solar?",
+    "trackingId" : "3686C8AD-53E4-443A-85A1-606EE35A267E",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Am I eligible for solar power?",
+    "trackingId" : "4F2CC1D9-CA7B-4081-9B23-2AEECB0C25AD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Cost to install solar power.",
+    "trackingId" : "3F4E8E62-DE0B-45BF-8D19-67BD99C7B501",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I learn about solar power?",
+    "trackingId" : "E18429A3-27B5-4916-BF52-6202B0C6E7FE",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Solar energy for contractors?",
+    "trackingId" : "CD9B2B11-4E24-4E2E-8C47-E927579B2BE3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How much can solar save me?",
+    "trackingId" : "2CE93589-704D-4CCB-85C4-17922B5C49DD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Can I install solar at my home?",
+    "trackingId" : "911D9BEF-F3EA-40EA-B293-739E84C05943",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Contractor installing solar?",
+    "trackingId" : "7ABAEA51-35D1-4E8F-904D-80C70C674F35",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How much can I save with solar?",
+    "trackingId" : "7EA1E3CD-0FE8-47AE-A0AC-EDDAF8462DC3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Am I eligible for solar energy?",
+    "trackingId" : "0723840D-EA16-42D8-B21B-C04595B6331F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

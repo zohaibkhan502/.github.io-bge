@@ -1,0 +1,21 @@
+{
+  "name" : "QuestionsAboutBill",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "C37683F6-2483-4D22-B62D-1483C54D6889",
+    "canonicalName" : "My bill is higher than usual",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "C9831977-1B7F-4C73-9BF6-AA27D152C1FF",
+    "canonicalName" : "I don't understand my bill",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "0F5A0804-46E6-44C5-8FA9-97E2DC827B52"
+}

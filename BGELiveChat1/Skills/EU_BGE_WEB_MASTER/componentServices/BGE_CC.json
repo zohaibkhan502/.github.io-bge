@@ -1,0 +1,10 @@
+{
+  "type" : "HOSTED",
+  "name" : "BGE_CC",
+  "packageFileName" : "my-custom-component-1.0.0.tgz",
+  "packageChecksum" : "23637f6a78f601017ef595630aa8bc97",
+  "runtime" : "node",
+  "loggingEnabled" : false,
+  "enabled" : true,
+  "trackingId" : "247b2744-febc-4934-9aca-50af49ccb289"
+}

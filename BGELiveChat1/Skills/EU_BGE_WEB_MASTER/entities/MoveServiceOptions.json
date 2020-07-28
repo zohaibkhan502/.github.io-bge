@@ -1,0 +1,15 @@
+{
+  "name" : "MoveServiceOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "082A7BEB-2F83-462A-9E2C-D3D3692FB2DA",
+    "canonicalName" : "Move Service",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "00003EBE-3D9D-453D-A3AB-B37C6934D654"
+}

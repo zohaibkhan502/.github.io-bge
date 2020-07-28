@@ -1,0 +1,27 @@
+{
+  "name" : "ServicesOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "5300EE9D-D04A-4AD7-93A9-184CEBAB379B",
+    "canonicalName" : "Start Service",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "E9305D67-1CDA-4FFF-A76B-A9ADA4B5ACC4",
+    "canonicalName" : "Move Service",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "4075F02D-CB32-443E-B1C7-EA4BB808BB22",
+    "canonicalName" : "Stop Service",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "B9777A3E-2683-432C-BD43-30C4D6D8C473"
+}

@@ -1,0 +1,152 @@
+{
+  "name" : "Power Line",
+  "trackingId" : "EBA8C79B-725B-43DC-94B3-276E3EB990D1",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Can power lines cause a fire?",
+    "trackingId" : "9E91F4B5-FC5A-48EC-8A68-4C48797CD98C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Can power line cause fires?",
+    "trackingId" : "D1202DC6-95D4-48BB-B6DE-4F0DA675A096",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Power line out!",
+    "trackingId" : "F4FC6484-0DA1-494D-A38D-0E65DECEB4FB",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Dangerous power line down.",
+    "trackingId" : "58435852-E13B-4339-A08C-C1AC394E029B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What to do if a powerline sparking?",
+    "trackingId" : "955D32CE-16F4-439B-8F59-BD56E26E07AE",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Dangerous power line.",
+    "trackingId" : "BF08DDFC-AD98-4FCC-84AA-F3021F35C894",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I report a sparking power line?",
+    "trackingId" : "B4A65785-277B-4228-AF3D-9237E34C681E",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I report a down power line?",
+    "trackingId" : "3BFD7FFF-FEBC-414B-8E02-9F7FCA2DFFCB",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Downed Power Line",
+    "trackingId" : "8D1C714B-68BB-4AAE-9A19-4B2DA0A4577B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How is sparking caused in power line?",
+    "trackingId" : "D0E6C269-0C7E-415C-838E-0F34CB999764",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Part of my power line is out.",
+    "trackingId" : "A6D87B1D-74E5-49AE-8958-F8BEF23AE9CC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Who do you call when a power line is down?",
+    "trackingId" : "23DF0A1A-1548-4534-8216-A4F798D2F1D6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I want to report a down power line.",
+    "trackingId" : "22A1ACE7-1AA8-472D-BE94-8B4D7AA867DD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "My power line is down.",
+    "trackingId" : "7A0D43B3-71E9-4C92-97B5-DBAA51FA316D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I report a down powerline?",
+    "trackingId" : "155F50F4-1802-4869-BFD0-86B1DC9810F4",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What to do if a power line sparking?",
+    "trackingId" : "29F940D9-B9A2-42B2-B925-7CF6BA80FB46",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Are down power lines dangerous?",
+    "trackingId" : "F4D44B4D-FE5A-4EEC-8075-B377C1B1B441",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I report an power line down?",
+    "trackingId" : "23BDA457-BC1B-4025-991B-FBDD44019576",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

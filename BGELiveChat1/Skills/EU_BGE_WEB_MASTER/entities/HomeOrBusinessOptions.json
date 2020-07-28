@@ -1,0 +1,27 @@
+{
+  "name" : "HomeOrBusinessOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "62263DE2-2BE3-4EC5-81C5-8D2FC4556D6E",
+    "canonicalName" : "Private Solar",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "35C4470E-8796-49DD-9A10-598F9D0E3E58",
+    "canonicalName" : "Community Solar",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "34D65156-DB0A-410C-B933-909641C4FD58",
+    "canonicalName" : "Intro to Solar Video",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "2226D239-FAE1-4740-B1FE-07824DC55486"
+}

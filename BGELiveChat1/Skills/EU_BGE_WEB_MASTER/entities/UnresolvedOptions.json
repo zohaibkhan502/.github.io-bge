@@ -1,0 +1,27 @@
+{
+  "name" : "UnresolvedOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "B798B363-76EA-44BC-8970-09AC4D27A8CC",
+    "canonicalName" : "Start Another Chat",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "0DE0E85C-64BB-410D-A39E-C8EC8B1DDFF3",
+    "canonicalName" : "End Chat",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "BD4274A8-1BC0-4D95-AC51-6154127D0478",
+    "canonicalName" : "Contact Us",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "731ACD12-D076-4B07-A03A-6AC4D9D4EF90"
+}

@@ -1,0 +1,445 @@
+/* For Chat message Background */
+.oda-chat-conversation {
+    background: #F7F7F7 !important;
+}
+
+
+/* For message bubble */
+.oda-chat-message-bubble {
+    padding-left: 5px !important;
+    background: #ffffff !important;
+    border-radius: 12px !important;
+}
+
+/* For custom Action CSS Button */
+.oda-chat-message-actions .oda-chat-action-postback {
+    border: 1px solid #D8D8D8 !important;
+    background-color: #FFFFFF !important;
+    color: #0059A4 !important;
+    display: block !important;
+    white-space: inherit !important;
+    transition: width .1s !important;
+    border-radius: 7px !important;
+    margin-right: 8px !important;
+    margin-left: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 7px 4px !important;
+}
+
+/* Action Button hover  CSS */
+.oda-chat-message-actions .oda-chat-action-postback:hover {
+    background-color: #E5EEF5 !important;
+    border-color: #0059A4 !important;
+}
+
+
+.oda-chat-message-actions {
+    padding: 8px 13px 9px;
+    line-height: 1.5;
+}
+
+
+/* Chat Bubble CSS Layout */
+.oda-chat-content-wrapper .oda-chat-message-bubble {
+    padding: 0px !important;
+    line-height: 1.3 !important;
+}
+
+/* Mesage bubble background set */
+.oda-chat-message-bubble .oda-chat-message-content {
+    margin: unset;
+}
+
+/* Message content CSS */
+.oda-chat-message-content {
+    padding: 8px 13px 9px;
+    line-height: 1.3;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+.oda-chat-content-wrapper {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+/* Used for styling border on chat message icon eg: Smile.png*/
+.oda-chat-message-icon {
+    border-radius: 50%;
+}
+
+/* Margin set for message comming from bot */
+.oda-chat-left .oda-chat-message-bubble {
+    margin: unset;
+    margin-right: 20% !important;
+}
+
+
+/* Message List or value provided CSS */
+.oda-chat-action-postback a {
+
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.oda-chat-left .oda-chat-icon-wrapper {
+    margin-right: 0px;
+}
+
+/* CSS For chat title */
+.oda-chat-title {
+    color: #4a4a4a !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+.oda-chat-header {
+    background: #ffffff !important;
+}
+
+
+/* .oda-chat-widget {
+   border-radius: 14px !important;    
+} */
+
+.oda-chat-user-input {
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease-out !important;
+    transition-property: color, background-color, border-color, opacity !important;
+    resize: none !important;
+    width: 100% !important;
+    -webkit-appearance: none !important;
+    overflow: hidden !important;
+    overflow-y: scroll !important;
+    padding-right: 17px !important;
+    line-height: 18px !important;
+    border: none !important;
+}
+
+/* .oda-chat-footer-button-svg-icon{
+     display: none !important;
+ } */
+
+.menu-icon {
+    color: #0059A4 !important;
+    font-weight: bold !important;
+}
+
+
+/* Border Radius set for chat Wrapper */
+.oda-chat-wrapper .oda-chat-widget {
+    border-radius: 14px;
+}
+
+.oda-chat-wrapper .oda-chat-widget .oda-chat-header {
+    border-radius: 14px 14px 0 0;
+    border-bottom: 1px solid #dadada;
+}
+
+.oda-chat-wrapper .oda-chat-widget .oda-chat-footer {
+    border-radius: 0 0 14px 14px;
+}
+
+/* Border Radius end for chat Wrapper */
+
+
+/* CHAT conversion font set css */
+.oda-chat-conversation {
+    font-family: 'Open Sans', sans-serif !important
+}
+
+/* Setting text to center in chat wrapper */
+.oda-chat-message-actions .oda-chat-action-postback .oda-chat-action-label {
+    text-align: center;
+}
+
+/* Setting color for user message */
+.oda-chat-right .oda-chat-message-bubble {
+    background: #ececec !important;
+
+}
+
+/* or setting the menu item hover */
+.menu-icon:hover {
+    display: block !important;
+}
+
+
+
+@media screen and (min-width: 426px) {
+    .oda-chat-widget {
+        height: 620px;
+        width: 400px !important;
+    }
+}
+
+
+.oda-chat-logo {
+    display: none;
+}
+
+.oda-chat-title {
+    margin-bottom: 4%;
+}
+
+/* Setting the button background */
+.oda-chat-button {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Setting the notification badge to none  */
+.oda-chat-notification-badge {
+    display: none !important;
+}
+
+
+/* Adding the image on button hover */
+.oda-chat-button :hover {
+    content: url('../images/chat-hover.svg');
+}
+
+/* Chat button CSS */
+.oda-chat-button img {
+    max-height: 100px !important;
+    max-width: 100px !important;
+}
+
+
+/* Modal Functionality CSS
+ */
+
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    /* position: fixed;  */
+    position: absolute;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    /* padding-top: 50%; */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    color: black;
+    margin: auto;
+    /* padding: 20px; */
+    border: 0px solid #888;
+    width: 80%;
+    padding: 3%;
+    top: 30%;
+    left: 6%;
+    transform: translate(1%, 35%);
+    position: absolute;
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.4);
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#noButton {
+    width: 40%;
+    margin-top: 5%;
+    margin-right: 2%;
+    margin-left: 9%;
+    border: 1px solid #0059A4 !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+    font-weight: bold;
+    padding: 2%;
+    color: #0059A4;
+}
+
+#yesButton {
+    width: 40%;
+    margin-top: 5%;
+    border: 1px solid #0059A4 !important;
+    border-radius: 6px !important;
+    background: #0059A4 !important;
+    color: white;
+    font-weight: bold;
+    padding: 2%;
+}
+
+#noButton:hover {
+    background-color: #E5EEF5 !important;
+    color: #0059A4 !important;
+    font-weight: 600 !important;
+    border-color: #0059A4 !important;
+}
+
+#yesButton:hover {
+    background-color: #E5EEF5 !important;
+    color: #0059A4 !important;
+    font-weight: 600 !important;
+    border-color: #0059A4 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.oda-chat-connection-status {
+    color: black;
+    position: absolute;
+    top: 35px;
+    left: 19px;
+    font-size: 9px !important;
+    text-transform: none !important;
+}
+
+.oda-chat-connection-status.oda-chat-connected::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f111";
+    -webkit-text-fill-color: green;
+    margin-left: 5px;
+}
+
+.oda-chat-connection-status.oda-chat-connecting::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f111";
+    -webkit-text-fill-color: orange;
+    margin-left: 5px;
+}
+
+.oda-chat-connection-status.oda-chat-disconnected::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f111";
+    -webkit-text-fill-color: grey;
+    margin-left: 5px;
+}
+
+.oda-chat-footer-button-svg-icon {
+    display: none;
+}
+
+.oda-chat-button-send::before {
+    color: #0059A4 !important;
+    font-weight: 600;
+    content: "Send";
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
+.oda-chat-button-send {
+    width: 30px !important;
+}
+
+.oda-chat-footer-button {
+    max-width: unset !important;
+}
+
+.oda-chat-card .oda-chat-card-content .oda-chat-card-title {
+    padding: 3px;
+    line-height: 1.3;
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.oda-chat-card-actions {
+    padding: 8px 13px 9px;
+    line-height: 1.5;
+}
+
+.oda-chat-card .oda-chat-card-actions a {
+    background-color: #FFFFFF !important;
+    display: block !important;
+    white-space: inherit !important;
+    transition: width .1s !important;
+    border-radius: 7px !important;
+    font-weight: 600 !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #D8D8D8 !important;
+    color: #0059A4 !important;
+    cursor: pointer;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 8px 10px;
+    margin-bottom: 5px;
+}
+
+.oda-chat-card-message-content::before {
+    content: '';
+    width: 34px;
+    display: inline-block;
+    border-radius: 50%;
+    height: 34px;
+    background: url('../images/Smile.png') no-repeat;
+    background-size: cover;
+    margin: 0 10px 5px 5px;
+}
+
+.oda-chat-card-message-horizontal .oda-chat-card-message-cards {
+    max-width: 69%;
+}
+
+.oda-chat-card {
+    box-sizing: unset !important;
+    border: unset !important;
+    border-radius: 12px !important;
+}

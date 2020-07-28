@@ -1,0 +1,80 @@
+{
+  "name" : "Greetings",
+  "trackingId" : "707A1548-B341-4AEF-9EB8-F230E15FA491",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Hi",
+    "trackingId" : "C3C5D519-858B-4F42-8949-73D6B267400B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How's it going?",
+    "trackingId" : "20D97E19-2070-438C-B4D0-28CF597682FA",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "what’s up",
+    "trackingId" : "17F77DA9-BE63-42D9-A942-7CCB0D2EC7C8",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Wassup Bot",
+    "trackingId" : "DB44B492-A115-4277-97B1-F6B40E56A248",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Ola Ola",
+    "trackingId" : "471CF00B-A519-46E0-8750-CB2CE40EAE91",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Hello there!",
+    "trackingId" : "949DDDD7-EC04-4BF4-86C5-E1A00DA978B9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Hi, how are you doing?",
+    "trackingId" : "CCD15675-0D39-4A2B-BA50-242AF721200C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Hello",
+    "trackingId" : "DAD05523-8F91-4BE6-A209-0486E44254DC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "hi",
+    "trackingId" : "3B52786B-61AF-47F1-81CD-EB88385A9BD6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

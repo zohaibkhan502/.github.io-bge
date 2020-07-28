@@ -1,0 +1,96 @@
+{
+  "name" : "HowToRegister",
+  "trackingId" : "21AA124C-8949-46D1-B514-20177DDC5EFF",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "How do I access my account online?",
+    "trackingId" : "B50E596B-F42F-478A-B08A-EF89D38E3DE9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How can I register for an online account",
+    "trackingId" : "CDE325E1-48D1-4274-84C1-80BA82174FE4",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I register for an online account?",
+    "trackingId" : "20B8D62B-DCAA-4E6B-92B3-507B158DF706",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I create an online account",
+    "trackingId" : "64991025-5AE5-48A1-ADC0-8E4E0C66E28B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What do I need to get an online account?",
+    "trackingId" : "9F73F446-2A5B-49B8-8AFE-87BD418B9211",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I create an online account?",
+    "trackingId" : "13A69F74-883A-4B72-9314-465A1369C893",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Tell me how I can access my account online.",
+    "trackingId" : "7D90E452-0531-4088-92C3-02EB4B038AA6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I get an online account?",
+    "trackingId" : "BF1B8402-7363-4C1F-A87E-DDB13A2A550A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I enroll in My Account",
+    "trackingId" : "E7F2015F-4F19-470E-B18E-5071BB6D536A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Why should I get an online account?",
+    "trackingId" : "C2E4FB15-F0F2-4FB9-8933-CF4AA6720CBF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I sign up for an online account",
+    "trackingId" : "F63D482E-7241-44E3-8594-B43E3A5E9D82",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

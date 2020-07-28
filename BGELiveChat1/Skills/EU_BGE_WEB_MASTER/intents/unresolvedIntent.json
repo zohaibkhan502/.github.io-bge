@@ -1,0 +1,136 @@
+{
+  "name" : "unresolvedIntent",
+  "trackingId" : "1DFD6D27-7500-4250-97FB-F71C02C764F8",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "jfdg erhghfdbgjsdg",
+    "trackingId" : "DF540CD7-CB3E-4F85-9432-1864EA4151C4",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "nxzmbcnbxncvmxzvc pisdfu sd",
+    "trackingId" : "22E8A0C2-A76C-4437-82B1-47053A0F4B5D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "lkjljkljkljlkjlkjkhjh\\",
+    "trackingId" : "9E22CE8B-0C67-4690-83E0-CF67D74B1947",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "eiuwuwyryuwoeyqpquweq qwuieuqe qiwue qpw",
+    "trackingId" : "C06FE2F6-E99D-4F8F-890C-1457CD86730B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "kfjhueirhtujehtrujhn d",
+    "trackingId" : "A7C29D82-B854-4BC1-81B6-878CE7E1B0BD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "dfhueh uef",
+    "trackingId" : "2CF7B9E7-6CFE-41EE-A21E-4B59E3EB0B71",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "djfjj fdij disjf jsd fsdfj",
+    "trackingId" : "FFFD3F18-10C9-45A8-8EF9-885F20934DDF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "sdfsderter",
+    "trackingId" : "B65D10B9-3AA4-4545-85EB-B8943A42E6E7",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "help",
+    "trackingId" : "F77D37BE-4E98-425D-91D4-B5178B53A701",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "zxmcnmzxnz zxxmcnssdsa",
+    "trackingId" : "F66C4565-319D-4659-B57E-B21801A604B0",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "jashdjhdas",
+    "trackingId" : "C85F6E77-BA5C-481F-B48E-CB343C898B1C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "gshdfeyr wyeh jsdnasd\\",
+    "trackingId" : "9E8F54F7-7A86-45C1-8459-62D3EB9527DA",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "sdjsdfhjh fjndskj q;wjedwk's",
+    "trackingId" : "31D3F798-817B-49E2-8C81-0B28D9B47550",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "akdjaksdjasdjsdjsajdskdj",
+    "trackingId" : "74B0AC09-ED07-49AA-9A71-11452E69336F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "fkdshfjhdsf",
+    "trackingId" : "050C9D8B-C3A5-47C1-9870-79B36CDA7A5A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "dkjfsjhdf wuedj ksod",
+    "trackingId" : "A3F58EFA-4626-4E9B-8B02-C0F6F8C7B089",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

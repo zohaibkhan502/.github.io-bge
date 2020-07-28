@@ -1,0 +1,56 @@
+{
+  "name" : "Covid19-Assistance",
+  "trackingId" : "0E683972-9969-4898-B1C0-9C4F65AA3E68",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "coronavirus",
+    "trackingId" : "8C126A4D-C7D5-4172-83B8-94BA4EC00C8E",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "update on coronavirus",
+    "trackingId" : "09358EF4-1A26-45E2-A6E6-A43E2D1D9AD3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Corona virus and Atlantic City Electric",
+    "trackingId" : "6056325F-9C81-441B-96DC-73728C2204AF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "can you help me on coronavirus",
+    "trackingId" : "CD6AEF52-0745-4E4A-8DB1-56E3EFD7CF74",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "covid-19",
+    "trackingId" : "076BE8B6-9E74-458B-8717-D78C8D9EB13D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "covid",
+    "trackingId" : "C6104A40-959D-4106-B958-5C065D6DDA91",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

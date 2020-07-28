@@ -1,0 +1,45 @@
+{
+  "name" : "coronavirusMenuOptions",
+  "type" : "ENUMVALUES",
+  "enumValues" : [ {
+    "type" : "StaticEntityValue",
+    "trackingId" : "F4BA34C5-1608-484C-B42C-FEECE210F574",
+    "canonicalName" : "Customer Assistance",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "15EFBBAA-EE8B-4A78-B2CC-6FDE37F6D65B",
+    "canonicalName" : "Interacting with AtlanticCityElectric",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "6F967EBF-2AC6-4D65-B9B2-A8CD21758228",
+    "canonicalName" : "Impact to Electric Service",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "A736422C-AE3B-4881-AFFA-3A05465682BE",
+    "canonicalName" : "Customer Safety",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "B69805AE-374B-4522-B174-E6CE895CC1B3",
+    "canonicalName" : "Employee Safety",
+    "synonyms" : null,
+    "extensionType" : null
+  }, {
+    "type" : "StaticEntityValue",
+    "trackingId" : "24764BC2-E3C8-4814-B236-0567D17FE05C",
+    "canonicalName" : "Other Information",
+    "synonyms" : null,
+    "extensionType" : null
+  } ],
+  "fuzzyMatch" : false,
+  "botPrompts" : [ ],
+  "validationRules" : [ ],
+  "trackingId" : "65117ACE-3421-46B4-BCDB-0255E3D9BB69"
+}

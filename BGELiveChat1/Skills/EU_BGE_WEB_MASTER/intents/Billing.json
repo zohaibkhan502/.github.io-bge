@@ -1,0 +1,208 @@
+{
+  "name" : "Billing",
+  "trackingId" : "C1755EF0-0A3D-449E-854B-FA72D8580488",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Where can I view my account balance?",
+    "trackingId" : "42017775-9B20-4B93-BA33-D7A97DAEC45C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Need to see balance.",
+    "trackingId" : "408423DF-7D1B-4638-B953-B464B3DDD7E0",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Why is my bill so large",
+    "trackingId" : "172EBA91-E9D6-46B9-B762-CE21FAA9D674",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Are there assistance programs for military deployment?",
+    "trackingId" : "9D6BF2A7-577A-4EA4-A3CD-9BF534B531BD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Bill payment help.",
+    "trackingId" : "637B6E89-0F9A-4709-9C7A-95DF21D35F0F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Bill pay assistance due to disability?",
+    "trackingId" : "4B05C7D4-932E-42EC-99F5-6710A1FE87CA",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What's my account balance?",
+    "trackingId" : "9344185D-87E3-441C-9209-6943FB9F055B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What do I owe?",
+    "trackingId" : "3FB42262-E60D-4FD6-AD93-3DCD6D09F36B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Am I eligible for bill pay assistance?",
+    "trackingId" : "A8BAF099-AF13-4BAF-800C-9C46D387F478",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Bill is higher than usual.",
+    "trackingId" : "51EECC5C-CD2A-4EF4-847D-ECE7942BDC65",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Where can I find my balance?",
+    "trackingId" : "65D54920-7B9A-4EDE-A536-F36FE0BB2944",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Bill payment assistance.",
+    "trackingId" : "1FEE9EC1-23B4-450B-BD27-000371D91B2C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Why is my bill so expensive",
+    "trackingId" : "8940795C-8B7E-4E81-B090-FB867E682A9B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How much do I owe?",
+    "trackingId" : "CE0A1B7E-4CC1-46C8-BFAF-CB6B59DB7E64",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How can I see what I owe?",
+    "trackingId" : "B26C9912-6082-4BB7-B13F-BE253983CDFE",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "View account balance.",
+    "trackingId" : "6E1CCD95-0816-418E-887C-7FE51326E21C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Find my balance.",
+    "trackingId" : "8FCE1907-AB70-448D-AC15-7B32F481DE78",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What's my balance?",
+    "trackingId" : "D35C3848-51E0-4A0A-940F-4505FCB0D717",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What do I owe on my account?",
+    "trackingId" : "6C4A36DC-3BED-4CE1-8AED-D22FDDB631E6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Why did my bill go up",
+    "trackingId" : "9A28EE5F-DBEE-4CB1-92E9-030E6DB09440",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Why did my bill increase",
+    "trackingId" : "BA5A0A29-E686-4F30-A22E-28E81FD4E711",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What is my bill amount?",
+    "trackingId" : "4757179B-6E17-4FE2-99AD-DCF2DF56D21A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How much is my bill?",
+    "trackingId" : "2210E497-E1DE-4D71-B972-A24898F6E1BF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Find account balance.",
+    "trackingId" : "89FE3A36-C49B-4752-9C65-0573A3FA041C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I know what my balance is?",
+    "trackingId" : "78E992A3-C8CB-463B-8628-3E725AA99CDF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

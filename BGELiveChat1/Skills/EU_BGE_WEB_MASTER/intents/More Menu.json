@@ -1,0 +1,48 @@
+{
+  "name" : "More Menu",
+  "trackingId" : "10DCD8CE-9EB9-4AFE-88F8-2E250A5C6D99",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Get More",
+    "trackingId" : "B9CC7B2E-A4B9-4911-80D6-F801DEF2D5EC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "More",
+    "trackingId" : "AF8CD23D-30CF-4FD3-9A49-5FDC4B8232ED",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Ask Atlantic city electric More",
+    "trackingId" : "46229005-3ABF-48E7-93B7-848DE1325732",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Ask Atlantic city electric More Option",
+    "trackingId" : "0DBC8800-B5C2-4617-B1AE-2B1361246260",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Give More options",
+    "trackingId" : "C74D1D7F-A879-4C0E-8E30-B48C7B06BB20",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

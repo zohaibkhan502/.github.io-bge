@@ -1,0 +1,10 @@
+{
+  "type" : "USER",
+  "trackingId" : "AD8B5A9C-AA38-479C-86F5-9625E7935626",
+  "name" : "EU_BGE_WEB_MASTER",
+  "displayName" : "EU_BGE_WEB_MASTER",
+  "version" : "1.0",
+  "intentTrainer" : "Tamao",
+  "autoCompleteTrainingStatus" : "NO_DATA",
+  "requiresAutoCompleteTraining" : false
+}

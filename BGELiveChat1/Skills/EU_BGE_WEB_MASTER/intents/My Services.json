@@ -1,0 +1,376 @@
+{
+  "name" : "My Services",
+  "trackingId" : "97F923F4-D7F9-4494-8A7B-B37444CF6319",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "I need to close my Atlantic City Electric account.",
+    "trackingId" : "39CC1C59-1BAD-4DA3-8F3D-B32CEA1CBEA9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I set up an account with Atlantic City Electric?",
+    "trackingId" : "292373F1-94EA-4938-92B5-5A1E354B2B03",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Cancel my Atlantic City Electric account.",
+    "trackingId" : "5AF060AA-3A67-422D-9835-3B27FCB793F3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service at my apartment.",
+    "trackingId" : "773C996B-51CE-4A49-B3AF-DA78C095825C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I want to disconnect my power.",
+    "trackingId" : "7D8134A3-DFB7-4D05-A3B9-11B69ED52CB9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I turn on power at a new address?",
+    "trackingId" : "926D26F9-F851-41C6-A335-C36AFC6B62B3",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I terminate my service?",
+    "trackingId" : "896775FE-D308-4BA2-BE0A-0F43ADC147C2",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need to start new service.",
+    "trackingId" : "D63F1503-76DC-4805-B31C-F82DFE9A30D5",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I move service from one address to another?",
+    "trackingId" : "27A7E3DD-A844-4F69-81EA-5B6C89A9275C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I have a new house. How do I turn the lights on?",
+    "trackingId" : "70EE242C-2F42-4D4F-8899-482713F34E39",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I open an new account with Atlantic City Electric?",
+    "trackingId" : "CC7CA4A4-90F5-49C1-8569-4AAF162C0C07",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I stop utility service at my home?",
+    "trackingId" : "F559453D-5A63-406B-8F1B-2E16D3E57C92",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service at new apartment.",
+    "trackingId" : "82AB22D5-6B45-435A-9A92-1D8554F76318",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service request for my house.",
+    "trackingId" : "7EFBA26B-70D9-4A3D-ABB7-065F1AF90240",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I stop my service?",
+    "trackingId" : "766D02E6-19B0-4DE1-9442-102ABFE299AA",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I stop service at my apartment?",
+    "trackingId" : "7F2FBB08-BD43-4ED1-B9F7-5A5B2CBD78B8",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Do I need to start new service when I move?",
+    "trackingId" : "A77C9ABC-1BCE-465F-A0A5-9F652B3226B2",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I move my service account to a new home?",
+    "trackingId" : "99F0E49A-EA39-450B-BC92-BE22C2827B11",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Disconnect power when I move out?",
+    "trackingId" : "006F5DDE-BA4B-4E68-9E92-B977010F3946",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service at my condo.",
+    "trackingId" : "4233C254-10C5-4370-9E55-254B102A8684",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need to move my service.",
+    "trackingId" : "31232E15-8870-4E09-ACEB-69A854E0FFDC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I move service to a new address?",
+    "trackingId" : "4D02BCC1-D9A4-4303-9EEF-79037FFE227D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I cancel my service?",
+    "trackingId" : "96EE468D-A3C5-4CDB-B5F8-1DAEBA05616F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I start service at my new home?",
+    "trackingId" : "4FE93E8E-DD2D-4F25-B9AF-3E28F45BAB32",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I start new service when I move?",
+    "trackingId" : "190593AE-54C0-431F-AD21-668B248D9F83",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need help terminating utility service.",
+    "trackingId" : "3401935C-F812-4531-8574-AE7A5E5D6A69",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "If I move within Atlantic City Electric's territory, can I move my service?",
+    "trackingId" : "2A94BD1D-323D-4059-B39A-997782AC1BF9",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I end my Atlantic City Electric service?",
+    "trackingId" : "9B70A307-8BBA-48B3-A7A8-6491F84B7CE0",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I start new service?",
+    "trackingId" : "7675F525-DF4A-445F-8549-1D54491CA8CD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Stop service at my address?",
+    "trackingId" : "2BF80E84-A6A0-4DAA-9BC4-89B21DF4604D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I move my Atlantic City Electric account to a new address?",
+    "trackingId" : "9F410505-3D74-4728-BBC4-C3809385296D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I start utility service?",
+    "trackingId" : "8CF0D3CF-1DCF-42D9-AA9A-7CB5D9B3E2CF",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service request for my apartment.",
+    "trackingId" : "64983FEF-F21C-4250-9CC5-21D55E3E7159",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Moving",
+    "trackingId" : "244A6518-3B0C-47A5-AFDD-65FEA736279B",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Turn off power at my address.",
+    "trackingId" : "53A93911-2861-4243-97A1-CA630F1BE76C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Can I transfer my account to a new address?",
+    "trackingId" : "363CD60A-D460-44FC-8271-9421F5B3AB22",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I'm a new customer. How do I start service?",
+    "trackingId" : "24A50B94-E38C-4413-A25B-2EA805F52507",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need to schedule a power disconnect.",
+    "trackingId" : "28E750DE-93EF-4BA8-8A07-7A83B339CF46",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Terminate power at my address.",
+    "trackingId" : "EA9FE318-6AD4-4ACA-8153-7869280A19B4",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I move my utility service?",
+    "trackingId" : "FBD1E632-D0B5-4C22-ACDA-8F64C98EA271",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I transfer utility service when I move?",
+    "trackingId" : "96808932-FCC6-451C-9AD9-F761E9C2B8FC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need to open a Atlantic City Electric account.",
+    "trackingId" : "C530BC4E-0EA0-4440-95AF-0137EFB626B6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I'm moving. How do I transfer my Atlantic City Electric account?",
+    "trackingId" : "AC399D99-7349-4E80-80BC-33CB3E660BC7",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I turn the lights on at my new apartment?",
+    "trackingId" : "FF25ACCC-1A7C-474A-BAEE-E907C090EB61",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I disconnect power at my house?",
+    "trackingId" : "930D6692-11C3-418C-AE35-E8F31EC18BF6",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Start service at my house.",
+    "trackingId" : "48A230EE-D930-4E66-AA06-F945F806BFB5",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

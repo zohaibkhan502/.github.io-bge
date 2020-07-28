@@ -1,0 +1,192 @@
+{
+  "name" : "Find Account Number",
+  "trackingId" : "ED720CB5-4BD1-44A0-A9B3-C13B3003B0D0",
+  "enabled" : true,
+  "intentParameters" : [ ],
+  "exampleData" : [ {
+    "sentence" : "Where is my account number?",
+    "trackingId" : "260154B2-6303-42BD-9836-6061FC3052AC",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How can I get a new password?",
+    "trackingId" : "CE538D89-4DBE-4235-B618-C40164932897",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I access my account if I forgot my password?",
+    "trackingId" : "58E02716-3E59-4A3F-BCB9-C4EBD1B57AA8",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How can I reset my password?",
+    "trackingId" : "A12F5DC9-2F3A-4DA4-80AB-C2793A1642BB",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Can I log in if I forgot my password?",
+    "trackingId" : "DF2ADA55-A25A-4453-A85A-1F7D46A131FD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Find Account Number",
+    "trackingId" : "A0C196C8-CFA2-40F8-9AF4-48908D45557D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Forgot password.",
+    "trackingId" : "9AC37F71-69A6-4FFD-AF50-87893840F27F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How can I find out what my account number is?",
+    "trackingId" : "F00A1BE1-B146-4ADE-ACE3-A46F4548B81C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I find my account number",
+    "trackingId" : "7D4C70C0-1724-4B39-82DF-5917F64BB9D4",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I get a new password?",
+    "trackingId" : "C13715FD-A39E-4BAB-AEE7-3A51DB8C4CDE",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Where can I find my account number?",
+    "trackingId" : "ED2F20AA-437E-4BCD-9CEC-23DE3FAF15FD",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I don’t know my password.",
+    "trackingId" : "5468F14E-DC80-49E2-A18D-8B724BF48D1E",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What does my account number look like?",
+    "trackingId" : "5CB9CF9F-BCED-4A39-A135-7C204A0C9C9D",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I look up my account number?",
+    "trackingId" : "92550FA3-DAA4-4C24-883C-8D9DE558D6B0",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I need to reset my password.",
+    "trackingId" : "DADE04FF-3FD3-46EC-91F5-6F3A0E168A62",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Don’t know password.",
+    "trackingId" : "DC53ACBD-7A40-4BF9-BA26-A61922E0A5D0",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "What is my account number?",
+    "trackingId" : "E3CFE180-FB8E-42FC-BD60-4B56B33F2456",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How long is my account number?",
+    "trackingId" : "879F3342-2B41-46A6-814E-14A6426D43FA",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I create an online account?",
+    "trackingId" : "7B1C694A-AC0C-45C3-9DD6-4FF4698F6BF5",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Need new password.",
+    "trackingId" : "C9800B78-4AB9-4D57-8B69-9E79B159685A",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "Account number lookup?",
+    "trackingId" : "9B56BFFD-1503-4B89-82EE-39FF4E361B3C",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "I forgot my password.",
+    "trackingId" : "6E9111F3-324F-46D8-A47F-8352AE003909",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  }, {
+    "sentence" : "How do I reset my password?",
+    "trackingId" : "FB0551E1-8CB2-466A-B6D0-AA5503C9ED2F",
+    "translated" : null,
+    "detectedLanguage" : null,
+    "translatedLanguage" : null,
+    "translatedBy" : null,
+    "exampleEntities" : [ ]
+  } ],
+  "autoCompleteData" : [ ]
+}

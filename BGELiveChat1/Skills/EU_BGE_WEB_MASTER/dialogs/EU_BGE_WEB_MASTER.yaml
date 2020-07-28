@@ -1,0 +1,1033 @@
+metadata:
+  platformVersion: "1.0"
+main: true
+name: "EU_BGE_WEB"
+
+context:
+  variables:
+    iResult: "nlpresult"
+    selectedMenu: "string"
+    seletedServiceAction: "ServicesOptions"
+    selectedMoveServiceAction: "MoveServiceOptions"
+    selectedBillingOption: "string"
+    endStateOptions: "YesNoOptions"
+    selectedQuestionAboutBill: "QuestionsAboutBill"
+    selectedMoreMenuOptions: "MoreMenuOptions"
+    selectedSolarEligibilityMenuOptions: "SolarEligibilityMenuOptions"
+    selectedHomeOrBusinessOptions: "HomeOrBusinessOptions"
+    selectedLoginOption: "string"
+    selectedEndOption: "string"
+    selectedUnresolvedOption: "UnresolvedOptions"
+    accessToken: "string"
+    authorizationCode: "string"
+    jwtToken: "string"
+    userData: "string"
+    lastState: "string"
+    accountNumber: "string"
+    address: "string" 
+    actBalance: "string"
+    actDueDate: "string"
+    selectedCoronavirusMenuOptions: "coronavirusMenuOptions"
+    fanResult: "string"
+    multipleAccountList: "list"
+    selectedAccountOption: "string"
+
+defaultTransitions:
+  error: "DefaultErrorHandler"
+
+states:  
+
+  SetProfileVariable:
+    component: "System.SetVariable"
+    properties:
+      variable: "accountNumber"
+      value: "${profile.accountNumber}"
+    transitions: {}
+  
+  SetJWTTokenVariable:
+    component: "System.SetVariable"
+    properties:
+      variable: "jwtToken"
+      value: "noJWTToken"
+    transitions: {}
+
+  Intent:
+    component: "System.Intent"
+    properties:
+      variable: "iResult"
+    transitions:
+      actions:
+        Greetings: "Greetings.InitChat"
+        My Services: "Services"
+        Power Line: "Powerline"
+        Solar Eligibility: "Solar"
+        More Menu: "More"
+        Find Account Number: "FindAccountNumber"
+        End: "EndState"
+        unresolvedIntent: "Unresolved"
+        Covid19-Assistance: "CoronavirusMainMenu"
+
+
+#-------------------------------------------------------------------------------
+# Reset Variables -> Greeting -------------------------------------
+#-------------------------------------------------------------------------------
+  
+  ResetMainMenuVariable:
+    component: "System.ResetVariables"
+    properties:
+      variableList: "selectedMenu,seletedServiceAction,selectedMoveServiceAction,selectedBillingOption,endStateOptions,selectedQuestionAboutBill,selectedMoreMenuOptions,selectedSolarEligibilityMenuOptions,selectedHomeOrBusinessOptions,selectedLoginOption"
+    transitions:
+      next: "LoginExists"
+
+
+#-------------------------------------------------------------------------------
+# Function if user Select No Thanks and want to continue with flow--------------
+#-------------------------------------------------------------------------------       
+  OAuthAccountLink.AfterCall:
+    component: "System.Output"
+    properties:
+      text: "Sorry, I can’t help you with that in this chat. Here are <a href='${system.config.OpCoContactUsURL}' target='_blank'>several options</a> to get an answer for your question."
+      keepTurn: true
+    transitions:
+       next: "EndState"
+
+
+
+
+#-------------------------------------------------------------------------------
+# Setting default account from  Multiple Accounts<5 getting from OAuth  --------
+#-------------------------------------------------------------------------------        
+  OAuthAccountLink.AuthoriseToken.OutageMultipleAccounts:
+    component: "System.CommonResponse"
+    properties:
+      processUserMessage: true
+      keepTurn: false
+      metadata: 
+        responseItems:  
+        - type: "text"  
+          text: "There are multiple addresses associated with your online account. Please review the accounts displayed and choose the correct one." 
+          actions: 
+          - label: "${multipleAccountList.address}"
+            type: "postback" 
+            payload: 
+              action: "multipleAccountValue"
+              variables: 
+                accountNumber: "${multipleAccountList.accountNumber}" 
+            iteratorVariable:  "multipleAccountList" 
+    transitions: 
+      actions: 
+         multipleAccountValue: "${lastState}"
+
+#-------------------------------------------------------------------------------
+# Redirect to web page if  Multiple Accounts>5 ---------------------------------
+#-------------------------------------------------------------------------------
+  OAuthAccountLink.AuthoriseToken.MultipleAccounts>5:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Because there are multiple addresses associated with your online account, the easiest way to choose the correct account is through <a href='${system.config.OpCoWebsiteURL}' target='_blank'>our website</a>."
+    transitions:
+      next: "OAuthAccountLink.AuthoriseToken.MultipleAccounts>5.ResetJWTTokenIfAccount>5"
+        
+  OAuthAccountLink.AuthoriseToken.MultipleAccounts>5.ResetJWTTokenIfAccount>5:
+    component: "System.ResetVariables"
+    properties:
+      variableList: "authorizationCode"
+    transitions: {}
+    
+  OAuthAccountLink.AuthoriseToken.MultipleAccounts>5.SetJWTTokenVariableAfterResetAuthCode:
+    component: "System.SetVariable"
+    properties:
+      variable: "jwtToken"
+      value: "noJWTToken"
+    transitions:
+      next: "ResetMainMenuVariable"
+      
+#-------------------------------------------------------------------------------
+# Condition "Login Exists ?" ---------------------------------------------------
+#-------------------------------------------------------------------------------
+
+  LoginExists:
+    component: "System.ConditionEquals"
+    properties:
+      source: "${profile.userSession}"
+      value: "noSessionId"
+    transitions:
+      actions:
+        equal: "Greetings"
+        notequal: "Greetings.InitChat"
+      
+
+#-------------------------------------------------------------------------------
+# Task "Greetings : Start Bot" -------------------------------------------------
+#-------------------------------------------------------------------------------
+
+  Greetings:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Hello! I'm ${system.config.OpCo}'s virtual assistant. Before we get started, log in to your My Account for the optimal experience. You can also continue without logging in."
+          actions:
+          - label: "Sign In"
+            type: "url"
+            payload:
+             url: "${profile.webLoginUrl}"
+             variables: 
+              selectedLoginOption: "Sign In"
+          - label: "No, Thanks"
+            type: "postback"
+            payload:
+             action: "No, Thanks"
+             variables: 
+              selectedLoginOption: "No, Thanks"
+      processUserMessage: true
+    transitions:
+      actions:
+        "No, Thanks": "Greetings.InitChat"
+        cancel: "Intent"
+      next: "Intent"
+
+
+#-------------------------------------------------------------------------------
+# Task "Initialize Chat : Start Bot" -------------------------------------------
+#-------------------------------------------------------------------------------
+
+  Greetings.InitChat:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Let’s chat! What can I help you with today? You can choose a topic to get started, or type in a direct question."
+          actions:
+          - label: "Find Account Number"
+            type: "postback"
+            payload:
+             action: "Find Account Number"
+             variables: 
+              selectedMenu: "Find Account Number"
+          - label: "Start, Stop or Move Service"
+            type: "postback"
+            payload:
+             action: "Start, Stop or Move Service"       
+             variables: 
+              selectedMenu: "Start, Stop or Move Service"
+          - label: "Covid-19 Assistance"
+            type: "postback"
+            payload:
+             action: "Covid-19 Assistance"
+      processUserMessage: true
+    transitions:
+      actions:
+        Find Account Number: "FindAccountNumber"
+        Start, Stop or Move Service: "Services"
+        Downed Power Line: "Powerline"
+        More: "More"
+        Covid-19 Assistance: "CoronavirusMainMenu"
+        cancel: "Intent"
+      next: "Intent"
+
+     
+#-------------------------------------------------------------------------------
+# Task "My Services" -----------------------------------------------------------
+#-------------------------------------------------------------------------------
+
+
+  Services:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Would you like to start a new service, move your existing service, or stop your current service?"
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables: 
+              seletedServiceAction: "${enumValue}"
+            iteratorVariable: "seletedServiceAction.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Start Service: "Services.StartService"
+        Move Service: "Services.MoveService"
+        Stop Service: "Services.StopService"
+        cancel: "Intent"
+      next: "Intent"
+      
+#-------------------------------------------------------------------------------
+# Main Task "Find Account Number" ----------------------------------------------
+#-------------------------------------------------------------------------------
+  FindAccountNumber:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "You can find your account number in the upper right-hand corner of your bill. Here's a <a href='${system.config.UnderstandingMyBillURL}' target='_blank'>sample residential bill</a> that shows where your account number appears.<br><br>If you are registered for an online My Account, you can also simply login to view your account number."
+    transitions:
+      next: "EndState"
+      
+      
+
+#-------------------------------------------------------------------------------
+# Sub Task "Start Service" -----------------------------------------------------
+#-------------------------------------------------------------------------------
+  
+  Services.StartService:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "You can start service one of two ways:<br>1. Use <a href='${system.config.OpCoWebsiteURL}' target='_blank'>${system.config.OpCoWebSite}</a> to submit a start service request.<br>2. You can call an ${system.config.OpCo?cap_first} service representative at ${system.config.StartStopMoveServicesContact}.<br><br>Things you will need:<ul></li><li>SSN # or Driver's License Number for residential customers</li><li>Tax ID # for businesses</li><li>Phone number</li><li>E-mail address</li><li>Previous address</li></ul><br>Use the steps below to start service online:<br>Tip! If you have an ${system.config.OpCo?cap_first}'s My Account, you can <a href='${system.config.OpCoWebsiteURL}' target='_blank'>sign in to your account</a> first to expedite the process.<br><br>1. From the main menu, select the My Account tab, then the Start Stop Move link under My Service.<br>2. Choose the Start Service option.<br>3. Complete the steps in each window and select Continue.<br><br>Moving from one address in our service area to another? Click below to move your existing service."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables: 
+              selectedMoveServiceAction: "${enumValue}"
+            iteratorVariable: "selectedMoveServiceAction.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Move Service: "Services.MoveService"
+        cancel: "Intent"
+      next: "Intent"
+        
+
+#-------------------------------------------------------------------------------
+# Sub Task "Stop Service" ------------------------------------------------------
+#-------------------------------------------------------------------------------
+  
+  Services.StopService:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Need to disconnect your service? You can schedule a service disconnect <a href='${system.config.StopServiceURL} 'target='_blank'>online</a>.<br><br>Here's what you'll need:<ul><li>Date to stop service at current address</li><li>Forwarding address for your final bill</li><li>Your ${system.config.OpCo?cap_first} account number and phone number (If you already have an online My Account, you can just log in.)</li></ul>Moving from one address in our service area to another? Click below to move your existing service."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables: 
+              selectedMoveServiceAction: "${enumValue}"
+            iteratorVariable: "selectedMoveServiceAction.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Move Service: "Services.MoveService"
+        cancel: "Intent"
+      next: "Intent"
+       
+
+#-------------------------------------------------------------------------------
+# Sub Task "Move Service" ------------------------------------------------------
+#-------------------------------------------------------------------------------
+  
+  Services.MoveService:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Here's what you'll need to move your service to a new address:<ul><li>Your ${system.config.OpCo?cap_first} account number and phone number and the last 4 digits of your SSN. Tip: If you have a <a href='${system.config.OpCoWebsiteURL} 'target='_blank'>My Account</a>, you can sign in to your account first to expedite the process.</li><li>Your new address</li><li>Date to stop service at your current address</li><li>Date to start service at your new address</li></ul><br>All set? <a href='${system.config.MoveServiceURL} 'target='_blank'>Get started online.</a>"
+    transitions: 
+      next: "EndState"
+      
+      
+#-------------------------------------------------------------------------------
+# Task "Report Power Line" -----------------------------------------------------
+#-------------------------------------------------------------------------------
+  
+  Powerline:
+   component: "System.CommonResponse"  
+   properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "First, call ${system.config.OpCo?cap_first} right away at ${system.config.PowerDownContact}. Representatives are available 24/7. Don't touch or try to move downed lines! Assume that any downed lines are energized and extremely dangerous. If power lines fall on your vehicle while you're in it, call 911 and stay in the car until emergency personnel can help you."
+   transitions:
+       next: "OutageEndFlow"
+             
+
+#--------------------------------------------------------------------
+# Sub Task "Outage End Flow" ----------------------------------------
+#--------------------------------------------------------------------
+  OutageEndFlow:
+    component: "System.CommonResponse"
+    properties:
+      #variable: "outageEndFlowOptions"
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Would you like to sign up for outage alerts? You'll be able to stay informed about outages and restorations in your area."
+          actions:
+          - label: "Yes, sign me up!"
+            type: "postback"
+            payload:
+              action: "Yes, sign me up!"
+          - label: "No thanks"
+            type: "postback"
+            payload:
+              action: "No thanks"
+      processUserMessage: true
+    transitions:
+      actions:
+        Yes, sign me up!: "OutageAlerts"
+        No thanks: "EndState"
+        cancel: "Intent"
+      next: "Intent"
+
+  OutageAlerts:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "<a href='${system.config.OutageAlertURL}' target='_blank'>Enroll in outage alerts</a> to receive text messages about current outages, estimated restoration times, and other important outage information."
+    transitions: 
+          next: "EndState"
+  
+
+
+      
+
+
+#-------------------------------------------------------------------------------
+# Task "Show Account Balance and Other Options" --------------------------------
+#-------------------------------------------------------------------------------  
+
+  Billing.AccountBalance.ShowAccountBalanceWithOptions:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Your current balance is $${actBalance}, due on ${actDueDate}.\n\nWould you like to pay your bill today? You can also download a PDF copy of your paper bill."
+          actions:
+          - label: "Pay Bill"
+            type: "postback"
+            payload:
+             action: "PayBill"
+             variables:
+              selectedAccountOption: "Pay Bill"
+          - label: "Get Copy of Bill"
+            type: "postback"
+            payload:
+             action: "GetCopyOfBill"
+             variables:
+              selectedAccountOption: "Get Copy of Bill"
+          - label: "No, thanks. I just needed my balance"
+            type: "postback"
+            payload:
+             action: "NoThanksIJustNeededMyBalance"
+             variables:
+              selectedAccountOption: "No, thanks. I just needed my balance"
+      processUserMessage: true
+    transitions:
+      actions:
+        PayBill: "Intent"
+        GetCopyOfBill: "Intent"
+        NoThanksIJustNeededMyBalance: "EndState"
+        cancel: "Intent"
+      next: "Intent"
+
+#-------------------------------------------------------------------------------
+# Task "Questions About Your Bill" ---------------------------------------------
+#-------------------------------------------------------------------------------
+  Billing.QuestionsAboutBill:
+    component: "System.CommonResponse"
+    properties:
+      maxPrompts: 1
+      nlpResultVariable: "iResult"
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "You've got questions about your bill? We've got answers. How can I help?"
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables: 
+              selectedQuestionAboutBill: "${enumValue}"
+            iteratorVariable: "selectedQuestionAboutBill.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        My bill is higher than usual: "Billing.QuestionsAboutBill.HighBill"
+        I don't understand my bill: "Billing.QuestionsAboutBill.UnderstandingBill"
+        cancel: "Intent"
+      next: "Intent"
+
+
+#----------------------------------------------------------------------------
+# Sub Task "High Bill" ------------------------------------------------------
+#----------------------------------------------------------------------------
+  Billing.QuestionsAboutBill.HighBill:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Many factors can affect your bill, from weather, to holidays and vacations, to household usage, to appliances.<br><br>Our website can help you find <a href='${system.config.WaysToSaveURL}' target='_blank'>ways to save<a> on your energy bill."
+    transitions: 
+      next: "EndState"
+
+
+#-------------------------------------------------------------------------------
+# Sub Task "Understanding Bill Video" ------------------------------------------
+#-------------------------------------------------------------------------------
+  Billing.QuestionsAboutBill.UnderstandingBill:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "We offer <a href='${system.config.UnderstandingMyBillURL}' target='_blank'>information online<a> that explains a sample bill, a video to understand your bill, and information to get in touch with us if you have still got questions."
+    transitions: 
+      next: "EndState"
+
+
+#---------------------------------------------------------------------
+# Task "More Menu Options" -------------------------------------------
+#---------------------------------------------------------------------
+ 
+  More:
+    component: "System.CommonResponse"
+    properties:
+      # variable: "MoreMenuOptions"
+      maxPrompts: 1
+      nlpResultVariable: "iResult"
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "You can choose a topic to get started, or type in a direct question."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables:
+               selectedMoreMenuOptions: "${enumValue}"
+            iteratorVariable: "selectedMoreMenuOptions.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Solar: "Solar"
+        Forgot Password: "ForgotPassword"
+        cancel: "Intent"
+      next: "Intent"
+
+
+#-------------------------------------------------------------------
+# Forgot Password --------------------------------------------------
+#-------------------------------------------------------------------
+  
+  ForgotPassword:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "If you’ve forgotten your ${system.config.OpCo} My Account password, you can reset it through our website. <a href='${system.config.ForgotPassword}' target='_blank'>Reset your password</a>."
+    transitions: 
+      next: "EndState"
+
+
+#---------------------------------------------------------------------
+# Task "Solar Eligibility" -------------------------------------------
+#---------------------------------------------------------------------
+  Solar:
+    component: "System.CommonResponse"
+    properties:
+      # variable: "solarEligibilityMenuOptions"
+      maxPrompts: 1
+      nlpResultVariable: "iResult"
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "At ${system.config.OpCo?cap_first}, we are powering a cleaner and brighter future for our customers and communities. Let us know who you are to learn more about how solar can work for you."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables:
+               selectedSolarEligibilityMenuOptions: "${enumValue}"
+            iteratorVariable: "selectedSolarEligibilityMenuOptions.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Home and Business: "Solar.HomeOrBusiness"
+        Developer or Contractor: "Solar.DeveloperOrContractor"
+        cancel: "Intent"
+      next: "Intent"       
+
+
+#-------------------------------------------------------------------------------
+# Task "Developer Or Contractor" -----------------------------------------------
+#-------------------------------------------------------------------------------
+  Solar.DeveloperOrContractor:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "We have <a href='${system.config.SolardeveloperOrContractorURL}' target='_blank'>resources</a> for developers and contractors to help customers apply for interconnection. Learn about the application process and methods for connecting power generation equipment to ${system.config.OpCo?cap_first}'s electric distribution system."
+    transitions: 
+      next: "EndState"
+
+
+#-----------------------------------------------------------------
+# Task "Solar Home" ----------------------------------------------
+#-----------------------------------------------------------------
+  Solar.HomeOrBusiness:
+    component: "System.CommonResponse"
+    properties:
+      # variable: "homeOrBusinessOptions"
+      maxPrompts: 1
+      nlpResultVariable: "iResult"
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Ok, you’re interested in solar power for residential and business customers. Here's information to get you started.<br><br>Private solar is installation of solar panels at your property. If you’re a renter or your property isn’t ideal for solar panels, you may still benefit from community solar.<br><br>Community options expand access to solar power for renters, those with shaded roofs or properties, and those who choose not to install a system at their home or business for financial or other reasons.<br><br>And finally, to learn more about solar in general, take a look at our informational video. Choose an option below to learn more."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+             variables:
+               selectedHomeOrBusinessOptions: "${enumValue}"
+            iteratorVariable: "selectedHomeOrBusinessOptions.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Private Solar: "Solar.HomeOrBusiness.PrivateSolar"
+        Community Solar: "Solar.HomeOrBusiness.CommunitySolar"
+        Intro to Solar Video: "Solar.HomeOrBusiness.Video"
+        cancel: "Intent"
+      next: "Intent"  
+
+
+#---------------------------------------------------------------------
+# Task "Private Solar" -----------------------------------------------
+#---------------------------------------------------------------------
+  Solar.HomeOrBusiness.PrivateSolar:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Want to install solar at your home or business? Here’s what you need to know to <a href='${system.config.PrivateSolarURL}' target='_blank'>get started.</a>"
+    transitions: 
+      next: "EndState"
+
+
+#-------------------------------------------------------------------------
+# Task "Community Solar" -------------------------------------------------
+#-------------------------------------------------------------------------
+  Solar.HomeOrBusiness.CommunitySolar:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Learn more about <a href='${system.config.CommunitySolarURL}' target='_blank'>community solar options</a> to take advantage of greater access to solar power."
+    transitions: 
+      next: "EndState"
+
+
+#--------------------------------------------------------------------------
+# Task "Video" ------------------------------------------------------------
+#--------------------------------------------------------------------------
+  Solar.HomeOrBusiness.Video:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Watch our <a href='${system.config.SolarVideoURL}' target='_blank'>short video</a> for an introduction to solar power’s benefits."
+    transitions: 
+      next: "EndState"      
+
+
+#-------------------------------------------------------------------------------
+# Task "End Flow" --------------------------------------------------------------
+#-------------------------------------------------------------------------------
+
+  EndState:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Did you find the answer(s) you needed today?"
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+              action: "${enumValue}"
+              variables: 
+                endStateOptions: "${enumValue}"
+            iteratorVariable: "endStateOptions.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Yes: "EndState.EndAsYes"
+        No: "Unresolved"
+        cancel: "Intent"
+      next: "Intent"
+     
+
+#-------------------------------------------------------------------------------
+# Task "End Flow" -> More Questions --------------------------------------------
+#-------------------------------------------------------------------------------
+ 
+  EndState.EndAsYes:
+    component: "System.CommonResponse"
+    properties:
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Great! I’m glad you were able to get the help you were looking for. Is there anything else I can help you with?"
+          actions:
+          - label: "I have more questions. Let’s keep going!"
+            type: "postback"
+            payload:
+             action: "I have more questions. Let’s keep going!"
+             variables:
+              selectedEndOption: "I have more questions. Let’s keep going!"
+          - label: "No, thanks, I’m all done!"
+            type: "postback"
+            payload:
+             action: "No, thanks, I’m all done!"
+             variables:
+              selectedEndOption: "No, thanks, I’m all done!"
+      processUserMessage: true
+    transitions:
+      actions:
+        I have more questions. Let’s keep going!: "RestartChat"
+        No, thanks, I’m all done!: "CloseChat"
+        cancel: "Intent"
+      next: "Intent"
+
+#-------------------------------------------------------------------------------
+# CloseChat : OAuth Exists or Not ----------------------------------------------
+#-------------------------------------------------------------------------------
+
+  CloseChat:
+    component: "System.ConditionEquals"
+    properties:
+      variable: "authorizationCode"
+      value: null
+    transitions:
+      actions:
+        equal: "CloseChat.OAuthNotExists"
+        notequal: "CloseChat.OAuthExists"
+
+#-------------------------------------------------------------------------------
+# Task "CloseChat" : If OAuth Not Exists ---------------------------------------
+#-------------------------------------------------------------------------------
+
+  CloseChat.OAuthNotExists:
+    component: "System.Output"
+    properties:
+      text: "Thanks! You can close the chat window."
+    transitions:
+      return: "end"
+
+#-------------------------------------------------------------------------------
+# Task "CloseChat" : If OAuth Exists -------------------------------------------
+#-------------------------------------------------------------------------------
+
+  CloseChat.OAuthExists:
+    component: "System.Output"
+    properties:
+      text: "Great! As a reminder, you will be signed out of your online account once you end this chat. You can close the chat window now."
+    transitions:
+      return: "end"
+
+#-------------------------------------------------------------------------------
+# Task "Unresolved" ------------------------------------------------------------
+#-------------------------------------------------------------------------------
+ 
+  Unresolved:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "I’m sorry I couldn’t help you here. Let’s try something else. You can fill out our online contact form to get in touch with someone that can help you. You can also choose from the options below to start over."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"  
+             variables: 
+              selectedUnresolvedOption: "${enumValue}"
+            iteratorVariable: "selectedUnresolvedOption.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        "Start Another Chat": "RestartChat"
+        "End Chat": "Unresolved.CloseChat"
+        "Contact Us": "ContactUs"
+        cancel: "Intent"
+      next: "Intent"
+
+#-------------------------------------------------------------------------------
+# SubTask "Unresolved.CloseChat" -----------------------------------------------
+#-------------------------------------------------------------------------------
+  Unresolved.CloseChat:
+    component: "System.Output"
+    properties:
+      text: "Sorry I couldn't help you this time! As an AI virtual assistant, I'm always learning, so be sure to check back next time you need help. You can close our chat window now."
+    transitions:
+      return: "end"
+#-------------------------------------------------------------------------------
+# SubTask "Start Another Chat" -------------------------------------------------
+#-------------------------------------------------------------------------------
+  RestartChat:
+    component: "System.CommonResponse"
+    properties:
+      nlpResultVariable: "iResult"
+      maxPrompts: 1
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Ready for more? You can choose a topic to get started, or type in a direct question."
+          actions:
+          - label: "Find Account Number"
+            type: "postback"
+            payload:
+             action: "Find Account Number"
+             variables: 
+              selectedMenu: "Find Account Number"
+          - label: "Start, Stop or Move Service"
+            type: "postback"
+            payload:
+             action: "Start, Stop or Move Service"       
+             variables: 
+              selectedMenu: "Start, Stop or Move Service"
+      processUserMessage: true
+    transitions:
+      actions:
+        Find Account Number: "FindAccountNumber"
+        Start, Stop or Move Service: "Services"
+        Downed Power Line: "Powerline"
+        More: "More"
+        Covid-19 Assistance: "CoronavirusMainMenu"
+        cancel: "Intent"
+      next: "Intent"
+
+#--------------------------------------------------------------------------
+# Task "ContactUs" --------------------------------------------------------
+#--------------------------------------------------------------------------
+  ContactUs:
+    component: "System.CommonResponse"
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "Here are <a href='${system.config.ContactUsURL}' target='_blank'>several options<a> to get answer for your question."
+    transitions: 
+      next: "CloseChat.OAuthNotExists" 
+      
+#---------------------------------------------------------------------
+# Coronavirus Intent -------------------------------------------------
+#---------------------------------------------------------------------
+ 
+  CoronavirusMainMenu:
+    component: "System.CommonResponse"
+    properties:
+ #     variable: "coronavirusMenuOptions"
+      maxPrompts: 1
+      nlpResultVariable: "iResult"
+      transitionAfterMatch: "true"
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "${system.config.OpCo} is committed to assisting our customers and communities during this Coronavirus pandemic. We've compiled answers to common customer questions regarding assistance, safety, and electric service."
+          actions:
+          - label: "${enumValue}"
+            type: "postback"
+            payload:
+             action: "${enumValue}"
+            iteratorVariable: "selectedCoronavirusMenuOptions.type.enumValues"
+      processUserMessage: true
+    transitions:
+      actions:
+        Customer Assistance: "Covid19.CustomerAssistance"
+        Interacting with AtlanticCityElectric: "Covid19.InteractingWithAtlanticCityElectric"
+        Impact to Electric Service: "Covid19.ImpactElectricService"
+        Customer Safety : "Covid19.CustomerSafety"
+        Employee Safety : "Covid19.EmployeeSafety"
+        Other Information: "Covid19.OtherCoronaInformation"
+        cancel: "Intent"
+      next: "Intent"
+
+
+#-------------------------------------------------------------------
+# Customer Assistance ----------------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.CustomerAssistance:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "To help customers during this time, we are suspending disconnects for non payment through at least June 1st. We have compiled a list of assistance resources <a href='https://www.atlanticcityelectric.com/myaccount/customersupport/pages/supportingourcommunities.aspx' target='_blank'>here</a> and  can assist customers with specific options at 1-800-334-7661."
+    transitions: 
+      next: "EndState"
+      
+#-------------------------------------------------------------------
+# Interacting with AtlanticCityElectric -------------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.InteractingWithAtlanticCityElectric:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "${system.config.OpCo} will continue to be available to assist customers during this pandemic. We are available at 1-800-334-7661 for questions and emergencies. We also encourage customers to conduct regular business with ComEd 24/7 using atlanticcityelectric.com or the <a href='https://www.atlanticcityelectric.com/MyAccount/CustomerSupport/Pages/MobileApp.aspx' target='_blank'>${system.config.OpCo} Mobile App</a>."
+    transitions: 
+      next: "EndState"
+      
+#-------------------------------------------------------------------
+# Impact to Electric Service ---------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.ImpactElectricService:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "${system.config.OpCo} is committed to continue addressing customer service needs and does not expect any disruption in electric service due to the public health crisis."
+    transitions: 
+      next: "EndState"
+      
+#-------------------------------------------------------------------
+# Customer Safety --------------------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.CustomerSafety:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "${system.config.OpCo} employees will be following CDC guidance on protective gear and social distancing in the event we require access to homes or businesses. We will always contact you in advance of working on your property, except for electric emergencies requiring immediate access. Contact us at 1-800-334-7661 if you have health concerns."
+    transitions: 
+      next: "EndState"
+      
+#-------------------------------------------------------------------
+# Employee Safety --------------------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.EmployeeSafety:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "To ensure the safety of our customers and employees, we are following the guidance of the Centers for Disease Control (CDC), eliminating all non-essential travel, following all travel restrictions, and limiting the size of internal and external meetings and gatherings. We are also ensuring our essential employees who regularly interact with customers have the appropriate equipment to perform their jobs safely."
+    transitions: 
+      next: "EndState"
+      
+#-------------------------------------------------------------------
+# Other Information--------------------------------------------------
+#-------------------------------------------------------------------
+  
+  Covid19.OtherCoronaInformation:
+    component: System.CommonResponse
+    properties:
+      keepTurn: true
+      metadata:
+        responseItems:
+        - type: "text"
+          text: "For the most up to date information on Covid-19, visit the <a href='https://www.cdc.gov/coronavirus/2019-ncov/index.html' target='_blank'>CDC</a> or <a href='https://www.who.int/' target='_blank'>WHO</a> information pages."
+    transitions: 
+      next: "EndState"
+
+#-------------------------------------------------------------------------------
+# Task "End" -------------------------------------------------------------------
+#-------------------------------------------------------------------------------
+  
+  DefaultErrorHandler:
+    component: "System.Output"
+    properties:
+      keepTurn: true
+      text: "I’m sorry, I ran into an issue responding to your question. Try closing the chat and starting over."
+    transitions:
+      return: "done"
